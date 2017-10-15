@@ -41,7 +41,11 @@ export default class BarcodeScannerExample extends React.Component {
           geocode: data
         })
         .then(function (response) {
-          console.log(response);
+          Alert.alert('Successfully sent !!', 'Barcode sent to database',
+            [
+              { text: 'OK', onPress: () => console.log('successfull') }
+            ]
+          )
         })
         .catch(function (error) {
           console.log(error);
